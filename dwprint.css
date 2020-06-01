@@ -1,0 +1,53 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 8
+   Case Problem 1
+
+   dessertWeb Print Styles
+   Author: Chris Coppock
+   Date:   07/30/2015
+
+   Filename:         dwprint.css
+   Supporting Files: 
+
+*/
+
+@page
+{
+  size: 8.5in 11in portrait;
+  margin: 0.5in;
+}
+
+/*Hide the page elements that will not be printed */
+
+header, section#left, section#right, nav, aside, footer, hgroup h2, article p:last-of-type {
+	display:none;
+}
+
+h1
+{
+  font-size: 200%;
+  margin-bottom: 0.2in;
+}
+
+h2
+{
+  margin-top: 0.5in;
+  font-size: 150%;
+ }
+
+li
+{
+  line-height: 1.5em;
+}
+
+ol
+{
+  margin-left: 0.5in;
+  list-style-type: decimal;
+}
+
+h2:last-of-type{
+	page-break-before: always;
+}
+
